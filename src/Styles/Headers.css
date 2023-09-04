@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:ital,wght@1,100;1,900&family=Send+Flowers&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.nav-colo-1 {
+  background-color: #ffffffba;
+}
+
+.navbar-style {
+  margin-top: 1rem;
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active {
+  color: #222;
+}
+
+.nav-menu {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+  .logo-img img {
+    height: 3rem;
+  }
+}
+
+.link-item-colr {
+  color: black;
+}
+
+.link-item-colr:hover {
+  color: #598216;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #222;
+  font-size: 600;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #598216;
+}
+.nav-link.active:hover {
+  color: #598216;
+}
+
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  display: block;
+  transition: 0.5s ease-in-out;
+  transform: scale(0, 1);
+  transform-origin: 50%;
+}
+
+.nav-link:hover::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: #efc100;
+  transform: scale(1, 1);
+}
+
+.mflex {
+  display: flex !important;
+  margin-left: auto !important;
+}
+
+@media screen and (max-width: 992px) {
+  .mflex {
+    display: block !important;
+    margin-left: 0% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-style {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .logo-img img {
+    height: 2rem;
+  }
+}
+
+/* navbar css finish here */
+
+/*slider*/
+.slide-bar {
+  padding: 1.5%;
+  padding-bottom: 3%;
+  border-radius: 1rem;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f9f8e7;
+}
+
+.mar {
+  padding-top: 6rem;
+}
+
+.text-margin {
+  text-align: start;
+  margin: 0%;
+  align-items: center;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../Assets/RightArrow.png);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../Assets/LeftArrow.png);
+}
+
+.caption {
+  padding-bottom: 10% !important;
+  text-align: center;
+}
+
+.caption h1 {
+  color: #67a2ea;
+  font: normal normal 900 63px/37px Montserrat;
+}
+
+.caption h2 h3 {
+  font: normal normal 900 63px/37px Montserrat;
+  color: #ffffff;
+}
+
+.caption p {
+  font: normal normal normal 18px/26px Poppins;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 18px/26px
+    var(--unnamed-font-family-poppins);
+  color: #ffffff;
+  display: block;
+}
+.carousel-indicators .active {
+  opacity: 2 !important;
+  background-color: #efc100;
+  width: 1rem !important;
+}
+.carousel-indicators [data-bs-target] {
+  border: 1px solid #efc100;
+  border-radius: 5px;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+.play {
+  position: absolute;
+  top: -5rem;
+  background-color: #fafafa;
+  border-radius: 50%;
+  color: #598216;
+  font-size: 32px;
+  width: 10%;
+  line-height: 100px;
+  display: inline-block;
+}
+.play i {
+  color: #598216;
+}
+
+@media screen and (max-width: 1025px) {
+  .play {
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .play {
+    line-height: 50px;
+  }
+
+  .play:after {
+    content: "";
+    display: block;
+    padding-bottom: 15%;
+  }
+
+  .caption h1 {
+    font-size: 35px;
+    color: #67a2ea;
+  }
+
+  .caption h3 {
+    font-size: 12px;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .play {
+    margin-top: 25%;
+    width: 12% !important;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .play {
+    margin-top: 45%;
+    width: 15% !important;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slide-bar {
+    padding-bottom: 8%;
+  }
+  .caption h1 {
+    font-size: 25px;
+    color: #67a2ea;
+  }
+
+  .caption h2 {
+    font-size: 11px;
+    font-weight: 50;
+    color: #ffffff;
+  }
+
+  .caption p {
+    display: none;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .play {
+    height: 5dvh;
+    width: 5rem;
+  }
+  .play i {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 320px) {
+  .play i {
+    font-size: small;
+  }
+}
