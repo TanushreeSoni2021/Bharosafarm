@@ -171,16 +171,5 @@
       "icon": "   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAqklEQVR4nN2TMQ7CMAxFK3VDKgdgYKE3yEV6E0aUrWOvwNor9Bo9AXTiCJ2pHgryYKVtqAcG+JIH2z9PdpRk2X8LKIEBu4ZwVoO8NBpjBHkNqt8lOAP5hg1y8QbVS6AR6AGXgDjxjCnQAWiBCbgCe+XZyTpPoAOOqyCVV8BDoopz5UuDFiaYZMIi8nwGRXfiVnrbQSl9FeSleDHG7EGGL3LHrhtwsm7yY3oBJ2TiEJ+RKyUAAAAASUVORK5CYII=",
       "content": "anjul@bharosa.farm"
     }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "name": "values.name",
-      "email": "values.email",
-      "phone": 7896541230,
-      "thoughts": "values.thoughts",
-      "location": "values.location",
-      "confirm": "values.confirm"
-    }
   ]
 }

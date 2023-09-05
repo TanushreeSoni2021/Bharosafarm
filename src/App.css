@@ -47,8 +47,6 @@
   color: #598216 !important;
 }
 
-
-
 .btn-check:checked + .btn-success,
 .btn-check:active + .btn-success,
 .btn-success:active,
@@ -81,14 +79,27 @@
   background-color: #598216 !important;
   border: solid 1px #598216;
 }
-
-@media screen and (max-width: 500px) {
-  .but{
+.change {
+  display: inline;
+  padding: 0% 15px;
+}
+.change-lan {
+  position: relative;
+  border-radius: 5px;
+  background-color: #598216;
+  border: #598216;
+  color: #fff;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 992px) {
+  .but {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .button-sty{
+}
+@media screen and (max-width: 500px) {
+  .button-sty {
     display: block;
     text-decoration: none;
   }

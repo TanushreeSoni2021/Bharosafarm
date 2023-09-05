@@ -40,13 +40,16 @@ function Header() {
 
 
                         <Nav className='ms-auto'>
-                            <span >
-                                <a href="https://play.google.com/store/apps/details?id=bharosa.mitra.bharosa_mitra_fe_0_1" target="_blank">
+                            <span className="but">
+                                <div className="change">
+                                <button className="change-lan"> </button>
+                                </div>
+                                <a  href="https://play.google.com/store/apps/details?id=bharosa.mitra.bharosa_mitra_fe_0_1" target="_blank" rel="noreferrer">
                                     <button className="button-style " type="button" >
                                         <FiDownload /> Downloads The App</button>
                                 </a>
                                <div className="but">
-                               <a href="https://play.google.com/store/apps/details?id=bharosa.mitra.bharosa_mitra_fe_0_1" target="_blank">
+                               <a href="https://play.google.com/store/apps/details?id=bharosa.mitra.bharosa_mitra_fe_0_1" target="_blank" rel="noreferrer">
                                     <button className="button-sty " type="button" >
                                         <FiDownload /> App</button>
                                 </a>

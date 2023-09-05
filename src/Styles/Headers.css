@@ -22,7 +22,6 @@
 .nav-menu {
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  justify-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,9 +78,14 @@
 
 .mflex {
   display: flex !important;
-  margin-left: auto !important;
+  margin-left: 25vw;
 }
 
+@media screen and (max-width: 1025px) {
+  .mflex {
+    margin-left: 20vw;
+  }
+}
 @media screen and (max-width: 992px) {
   .mflex {
     display: block !important;
