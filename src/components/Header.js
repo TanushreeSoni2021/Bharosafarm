@@ -13,6 +13,8 @@ import Axios from "axios";
 
 function Header() {
   const [myheader, setHeader] = useState();
+  const [language, setlanguage] = useState(true);
+
   useEffect(() => {
     Axios.get(`http://localhost:4000/header`)
       .then((res) => {
@@ -66,7 +68,13 @@ function Header() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <button className="button-style " type="button">
+                  <button
+                    className="button-style "
+                    type="button"
+                    onClick={() => {
+                      setlanguage(!language);
+                    }}
+                  >
                     <FiDownload /> Downloads The App
                   </button>
                 </a>
