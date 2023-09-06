@@ -91,8 +91,10 @@
     display: block !important;
     margin-left: 0% !important;
   }
+  .carousel-caption {
+    bottom: 1rem !important;
+  }
 }
-
 @media screen and (max-width: 600px) {
   .navbar-style {
     margin-top: 0;
@@ -167,6 +169,9 @@
   background-color: #efc100;
   width: 1rem !important;
 }
+.carousel-caption {
+  bottom: 6rem;
+}
 .carousel-indicators [data-bs-target] {
   border: 1px solid #efc100;
   border-radius: 5px;
@@ -193,12 +198,19 @@
     line-height: 70px;
   }
 }
-
+@media screen and (max-width: 767px){
+.play {
+    height: 5dvh;
+    width: 1rem;
+}
+}
 @media screen and (max-width: 769px) {
   .play {
-    line-height: 50px;
+    line-height: 20px;
   }
-
+  .carousel-caption {
+    bottom: 3rem;
+  }
   .play:after {
     content: "";
     display: block;
@@ -221,6 +233,9 @@
     margin-top: 25%;
     width: 12% !important;
     line-height: 20px;
+  }
+  .carousel-caption {
+    bottom: 1rem;
   }
 }
 @media screen and (max-width: 321px) {
@@ -246,7 +261,7 @@
   }
 
   .caption p {
-    display: none;
+    font-size: 60%;
     color: #ffffff;
   }
 }

@@ -1,7 +1,10 @@
+a {
+  text-decoration: none;
+}
 .button-style {
   border-radius: 5px;
   background-color: #598216;
-  border: #598216;
+  border: solid 2px #598216;
   color: #fff;
   text-align: right;
   padding: 0.5rem;
@@ -10,7 +13,7 @@
 .button-style:hover {
   border-radius: 5px;
   background-color: #fff;
-  border: solid 1px #598216;
+  border: solid 2px #598216;
   color: #598216;
   padding: 0.45rem;
 }
@@ -18,7 +21,7 @@
 .button-style:visited {
   border-radius: 5px;
   background-color: #fff;
-  border: solid 1px #598216;
+  border: solid 2px #598216;
   color: #598216 !important;
 }
 
@@ -29,6 +32,8 @@
   border: #598216;
   color: #fff;
   text-align: right;
+  text-decoration: underline;
+  text-decoration-color: #598216;
   padding: 0.5rem;
 }
 
@@ -38,6 +43,7 @@
   border: solid 1px #598216;
   color: #598216;
   padding: 0.45rem;
+  text-decoration-color: #fff;
 }
 
 .button-sty:visited {
@@ -77,7 +83,7 @@
 .button-light:hover {
   color: #ffffff !important;
   background-color: #598216 !important;
-  border: solid 1px #598216;
+  border: solid 2px #598216;
 }
 .change {
   display: inline;
@@ -87,21 +93,26 @@
   position: relative;
   border-radius: 5px;
   background-color: #598216;
-  border: #598216;
+  border: 1px solid #fff;
+}
+.change-lan img {
   color: #fff;
-  padding: 0.5rem;
+  width: 80%;
+}
+.change-lan:hover {
+background-color: #729042;
 }
 @media screen and (max-width: 992px) {
   .but {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2%;
   }
 }
 @media screen and (max-width: 500px) {
   .button-sty {
     display: block;
-    text-decoration: none;
   }
 
   .button-style {

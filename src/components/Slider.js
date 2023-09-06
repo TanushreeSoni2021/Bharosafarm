@@ -72,11 +72,12 @@ function Slider() {
                     href="https://youtu.be/J_7rmoEwllw"
                     target={"_blank"}
                     datatype="video"
+                    rel="noreferrer"
                   >
                     <i className="fa fa-play" aria-hidden="true"></i>
                   </a>
+                  <h3>{mydata?.val.data.video}</h3>
                 </div>
-                <h3>{mydata?.val.data.video}</h3>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

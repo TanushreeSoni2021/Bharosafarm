@@ -115,13 +115,12 @@ const Formfill = () => {
               name="confirm"
             />
             <span>
-              I am okay sharing my personal information with BHAROSA and I have
-              had a look at your{" "}
+            I am Okay sharing my personal information with BHAROSA and I have had a look at your
               <span style={{ color: "#1650D3", fontWeight: "bold" }}>
                 {" "}
-                "Privacy Policy"{" "}
+                “Privacy Policy” {" "}
               </span>
-              to see how you use it
+              to see how you use it.
             </span>
             <p className="text-danger error_message">
               {/* <ErrorMessage name="confirm" /> */}
