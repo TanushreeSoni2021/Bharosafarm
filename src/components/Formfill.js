@@ -1,6 +1,7 @@
 import "../Styles/Home.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+// import T from '../helpers/translations'
 
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -31,7 +32,8 @@ const Formfill = () => {
   return (
     <div className="container">
       <div className="my-form mt-5">
-        <h2 className="head mt-5">Talk to us</h2>
+      {/* <h2 className="head mt-5">T(Talk to us)</h2> */}
+      <h2 className="head mt-5">Talk to us</h2>
 
         <form ref={form} onSubmit={sendEmail}>
           <div className="col-12 d-flex flex-column justify-content-lg-end justify-content-center mx-1 mb-3 position-relative">
