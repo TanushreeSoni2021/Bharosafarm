@@ -1,5 +1,5 @@
-import translations from "../helpers/translation";
-const Translate = (key) => {
+import translations from "../helpers/translations";
+const T = (key) => {
   if (key) {
     try {
       let value = translations.get(key)[localStorage.getItem("index")];
@@ -8,6 +8,6 @@ const Translate = (key) => {
       return key;
     }
   }
-  return null;
+  return key;
 };
-export default Translate;
+export default T;

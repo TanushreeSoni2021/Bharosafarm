@@ -1,7 +1,8 @@
 import "../Styles/Home.css";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-// import T from '../helpers/translations'
+import data from "../Data/Data";
+import T from "../hooks/Translate";
 
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
@@ -29,11 +30,11 @@ const Formfill = () => {
       );
   };
 
+  let SubmitButton = "Submit"
   return (
     <div className="container">
       <div className="my-form mt-5">
-      {/* <h2 className="head mt-5">T(Talk to us)</h2> */}
-      <h2 className="head mt-5">Talk to us</h2>
+        <h2 className="head mt-5">{T(data.user.heading)}</h2>
 
         <form ref={form} onSubmit={sendEmail}>
           <div className="col-12 d-flex flex-column justify-content-lg-end justify-content-center mx-1 mb-3 position-relative">
@@ -45,7 +46,7 @@ const Formfill = () => {
               name="name"
             />
             <label htmlFor="name" className="lable__box">
-              Name<span className="text-danger">*</span>
+              {T(data.user.val1)}<span className="text-danger">*</span>
             </label>
             <p className="text-danger error__message">
               {" "}
@@ -61,7 +62,7 @@ const Formfill = () => {
               name="email"
             />
             <label htmlFor="email" className="lable__box">
-              Email<span className="text-danger">*</span>
+              {T(data.user.val2)}<span className="text-danger">*</span>
             </label>
             <p className="text-danger error__message">
               {/* <ErrorMessage name="user_email" /> */}
@@ -76,7 +77,7 @@ const Formfill = () => {
               name="user_phone"
             />
             <label htmlFor="Phone" className="lable__box">
-              Phone Number<span className="text-danger">*</span>
+              {T(data.user.val3)}<span className="text-danger">*</span>
             </label>
             <p className="text-danger error__message">
               {/* <ErrorMessage name="Phone" /> */}
@@ -91,7 +92,7 @@ const Formfill = () => {
               name="user_location"
             />
             <label htmlFor="location" className="lable__box">
-              Where are you Located
+              {T(data.user.val4)}
             </label>
           </div>
           <div className="col-12 d-flex flex-column justify-content-lg-end justify-content-center mx-1 mb-3 position-relative">
@@ -103,7 +104,7 @@ const Formfill = () => {
               name="message"
             />
             <label htmlFor="thoughts" className="lable__box">
-              What's on your mind
+              {T(data.user.val5)}
             </label>
           </div>
 
@@ -115,21 +116,14 @@ const Formfill = () => {
               name="confirm"
             />
             <span>
-            I am Okay sharing my personal information with BHAROSA and I have had a look at your
-              <span style={{ color: "#1650D3", fontWeight: "bold" }}>
-                {" "}
-                “Privacy Policy” {" "}
-              </span>
-              to see how you use it.
+              {T(data.user.val6)}.
             </span>
             <p className="text-danger error_message">
               {/* <ErrorMessage name="confirm" /> */}
             </p>
           </div>
           <div className="justify-content-center text-center mt-5">
-            <button className="button-style px-5" type="submit">
-              Submit
-            </button>
+            <button className="button-style px-5" type="submit">{T(SubmitButton)}</button>
           </div>
         </form>
       </div>

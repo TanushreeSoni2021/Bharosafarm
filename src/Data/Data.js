@@ -40,7 +40,7 @@ const data = {
     heading: {
         "id": 1,
         "head": "Our Partners",
-        "head2": "Our Team",
+        "head2": "Our Team", 
     },
     slider: {
         "heading": "Trust,",
@@ -155,19 +155,29 @@ const data = {
         "id": 1,
         "icon": weAreHere,
         "heading": "We Are Here",
-        "content": "We are based in Ujjain, Sandalpur, Indore, Ratlam, Khandwa, Harda and various other locations in MP enabling farmers and agri ecosystemwith our products, services and solutions to enhance farm productivity and augment farm incomes."
+        "content": "We are based in Ujjain, Sandalpur, Indore, Ratlam, Khandwa, Harda and various other locations in MP enabling farmers and agri ecosystem with our products, services and solutions to enhance farm productivity and augment farm incomes."
+    },
+    user: {
+        "id": 1,
+        "heading": "Talk to us",
+        "val1": "Name",
+        "val2": "Email Address",
+        "val3": "Phone Number",
+        "val4": "Where are you located",
+        "val5": "What's on your mind",
+        "val6":"I am Okay sharing my personal information with BHAROSA and I have had a look at your “Privacy Policy” to see how you use it."
     },
     footer: [
         {
             "id": 1,
             "icon": location,
-            "heading": "  Registered Address:",
+            "heading": "Registered Address:",
             "content": "Bharosa AgriInnovation Pvt. Ltd., No.159,1st Floor, C-21 Mall, Nanakheda Bus Stand, Sanwer Road, Ujjain, Madhya Pradesh, INDIA-456001"
         },
         {
             "id": 2,
             "icon": location,
-            "heading": "  Development Center:",
+            "heading": "Development Center:",
             "content": "Bharosa AgriInnovation Pvt. Ltd., SSISM Campus NH 59-A, Gram-Sandalpur, Tehsil-Khategaon, Madhya Pradesh, INDIA-45336"
         }
     ],
@@ -182,7 +192,7 @@ const data = {
             "icon": mail,
             "content": "anjul@bharosa.farm"
         }
-    ],
+    ]
 }
 
 export default data;

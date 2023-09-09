@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/Headers.css";
 import "../App.css";
 import data from "../Data/Data"
@@ -9,10 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../Assets/logo.png";
 import logolang from "../Assets/language.png";
 import { FiDownload } from "react-icons/fi";
-// import T from "../hooks/Translate";
+import T from "../hooks/Translate";
 
 function Header() {
-  const [language, setlanguage] = useState(true);
+  let button ="Downloads The App";
   return (
     <>
       <Navbar
@@ -39,7 +39,7 @@ function Header() {
                       className="link-item-colr nav-link "
                       href={items.url}
                     >
-                      {items.title}
+                      {T(items.title)}
                     </Nav.Link>
                   </Nav>
                 );
@@ -49,7 +49,13 @@ function Header() {
             {/* language change button  */}
             <Nav className="ms-auto">
               <div className="change but">
-                <button className="change-lan">
+                <button onClick={(event) => {
+                  event.preventDefault();
+                  let isTrue = localStorage.getItem('index')
+                  localStorage.setItem('index', isTrue === "0" ? 1 : 0)
+                  window.location.reload()
+
+                }} className="change-lan">
                   <img src={logolang} alt="" />
                 </button>
               </div>
@@ -61,12 +67,8 @@ function Header() {
                 >
                   <button
                     className="button-style "
-                    type="button"
-                    onClick={() => {
-                      setlanguage(!language);
-                    }}
-                  >
-                    <FiDownload /> Downloads The App
+                    type="button">
+                    <FiDownload /> {T(button)}
                   </button>
                 </a>
                 <a

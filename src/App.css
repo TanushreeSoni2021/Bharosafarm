@@ -10,7 +10,7 @@
 .button-style:hover {
   border-radius: 5px;
   background-color: #fff;
-  border: solid 3px #598216;
+  border: solid 3px #fff;
   color: #598216;
   padding: 0.45rem;
 }

@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import "../Styles/Footer.css";
 import data from "../Data/Data"
 import footer from "../Assets/Footer.png";
@@ -7,9 +7,11 @@ import footer from "../Assets/Footer.png";
 // import twitter from "../Assets/greentwit.png";
 // import insta from "../Assets/greeninsta.png";
 import Nav from 'react-bootstrap/Nav';
+import T from "../hooks/Translate";
+
 
 function Footer() {
-    
+
     return (
         <>
             <section><img src={footer} width={"100%"} alt='' />
@@ -19,8 +21,8 @@ function Footer() {
                             {data.footer.map((item, index) => {
                                 return (
                                     <div className="col-md-3 col-lg-4 col-xl-4 mx-auto mt-3 contain-align-footer" key={index}>
-                                        <h6 className="text-uppercase mb-1 font-weight-bold text-white contain-align-footer"><img src={item.icon} alt='' />{item.heading}</h6>
-                                        <p className='contain-align-footer'>{item.content}</p>
+                                        <h6 className="text-uppercase mb-1 font-weight-bold text-white contain-align-footer"><img src={item.icon} alt='' />&nbsp;&nbsp;{T(item.heading)}</h6>
+                                        <p className='contain-align-footer'>{T(item.content)}</p>
                                     </div>
                                 )
                             })
@@ -30,7 +32,7 @@ function Footer() {
                                     {data.contact.map((item, index) => {
                                         return (
                                             <div key={index}>
-                                                <p className='contain-align-footer'> <img className='px-2' src={item.icon} alt='' />  {item.content}</p>
+                                                <p className='contain-align-footer'> <img className='px-2' src={item.icon} alt='' />  {T(item.content)}</p>
                                             </div>
                                         )
                                     })
@@ -40,15 +42,11 @@ function Footer() {
                         </div>
                         <hr className="mb-4" />
                         <Nav activeKey="#home" className="pb-3">
-                            <Nav.Item >
-                                <Nav.Link href="#home" className='text-white'>Home</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item >
-                                <Nav.Link href="#bharosapartner" className='text-white'>Bharosa partners</Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item >
-                                <Nav.Link href="#ourteam" className='text-white'>Our team</Nav.Link>
-                            </Nav.Item>
+                            {data.header.map((item, index) => {
+                                return (<Nav.Item key={index} >
+                                    <Nav.Link href={item.url} className='text-white'>{T(item.title)}</Nav.Link>
+                                </Nav.Item>)
+                            })}
                         </Nav>
                     </div>
                     <div className="row align-item-center" style={{ width: "100.6%" }}>

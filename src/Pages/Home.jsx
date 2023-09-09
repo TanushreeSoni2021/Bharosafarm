@@ -11,6 +11,7 @@ import greenmail from "../Assets/mail.png";
 import Formfill from '../components/Formfill';
 import Slider from '../components/Slider';
 import We from '../components/We';
+import T from "../hooks/Translate";
 
 const mystyle = {
 
@@ -30,10 +31,10 @@ function Home() {
 
         <div className='container mt-5'>
           <div className='row d-flex justify-content-center '>
-            <h2 className=' d-flex justify-content-center head'>{data.about.heading}
+            <h2 className=' d-flex justify-content-center head'>{T(data.about.heading)}
             </h2>
           </div>
-          <div className='row para d-flex justify-content-center'><p>{data.about.para}</p></div>
+          <div className='row para d-flex justify-content-center'><p>{T(data.about.para)}</p></div>
           <div className="row text-center text-md-left">
             {
               data.aboutimg.map((items, index) => {
@@ -43,12 +44,12 @@ function Home() {
                       <Tooltip theme='light' arrow='true' arrowSize='big'
                         html={(
                           <div style={mystyle} >
-                            {items.title}
+                            {T(items.title)}
                           </div>
                         )}
                         position="bottom" >
                         <img src={items.image} alt='' />
-                        <p className='p-2' style={{ fontWeight: 'bold', fontSize: '1em' }} >{items.text}</p>
+                        <p className='p-2' style={{ fontWeight: 'bold', fontSize: '1em' }} >{T(items.text)}</p>
                       </Tooltip>
                     </div>
                   </div>
@@ -68,10 +69,10 @@ function Home() {
             <img alt='' className='row d-flex' src={data.aboutproduct.logo} height={"80px"} width={"80px"} style={{ 'margin': '0 auto' }} /><br />
 
             <div className='row d-flex justify-content-center'>
-              <h2 className=' d-flex justify-content-center head' style={{ color: "#FFFFFF" }}>{data.aboutproduct.heading}</h2>
+              <h2 className=' d-flex justify-content-center head' style={{ color: "#FFFFFF" }}>{T(data.aboutproduct.heading)}</h2>
             </div>
             <div className='row d-flex justify-content-center para paragraph-Align'>
-              <p style={{ color: "#FFFFFF" }}>{data.aboutproduct.content}</p>
+              <p style={{ color: "#FFFFFF" }}>{T(data.aboutproduct.content)}</p>
             </div>
           </div>
         </div>
@@ -81,7 +82,7 @@ function Home() {
 
       <section className=" pt-5 pb-4">
         <div>
-          <h2 className=' d-flex justify-content-center head'>{data.heading.head}</h2>
+          <h2 className=' d-flex justify-content-center head'>{T(data.heading.head)}</h2>
         </div>
         <div className="container text-center text-md-left contain-align">
 
@@ -91,7 +92,7 @@ function Home() {
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto img-fluid" key={index}>
 
                   <img src={item.image} alt='' className="img-fluid" />
-                  <h5 className="font-weight-bold">{item.title}</h5>
+                  <h5 className="font-weight-bold">{T(item.title)}</h5>
                 </div>
               )
             })
@@ -105,7 +106,7 @@ function Home() {
 
       <section className="text-white pt-5 pb-4" style={{ "backgroundColor": "#F9F8E7" }}>
         <div>
-          <h2 className=' d-flex justify-content-center head'>{data.heading.head2}</h2>
+          <h2 className=' d-flex justify-content-center head'>{T(data.heading.head2)}</h2>
         </div>
         <div className="container text-center text-md-left contain-align">
           <div className="row text-center text-md-left ">
@@ -113,8 +114,8 @@ function Home() {
               return (
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 mb-5" key={index}>
                   <img className='img-fluid' src={title.image} alt='' />
-                  <h5 className="head font-weight-bold">{title.name}</h5>
-                  <h5 className=" font-weight-bold text-dark">{title.position}</h5>
+                  <h5 className="head font-weight-bold">{T(title.name)}</h5>
+                  <h5 className=" font-weight-bold text-dark">{T(title.position)}</h5>
                   <a href={title.linkedin} target="_blank" rel="noreferrer"> <img className='img-fluid' src={Linked} alt='' /></a>
                   <a href={title.mail} target="_blank" rel="noreferrer">
                     <img className='img-fluid' src={greenmail} alt='' />
@@ -132,10 +133,10 @@ function Home() {
           <div className="styling pt-5" >
             <img className='row d-flex' src={data.position.icon} style={{ 'margin': '0 auto' }} alt='' /><br />
             <div className='row d-flex '>
-              <h2 className=' d-flex justify-content-center head'>{data.position.heading}</h2>
+              <h2 className=' d-flex justify-content-center head'>{T(data.position.heading)}</h2>
             </div>
             <div className='row d-flex justify-content-center para paragraph-Align'>
-              <p>{data.position.content}</p>
+              <p>{T(data.position.content)}</p>
             </div>
             <div className='row d-flex justify-content-center contain-align '>
 
