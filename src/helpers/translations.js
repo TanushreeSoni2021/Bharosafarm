@@ -3,11 +3,13 @@ const translations = new Map([
   ["Home", ["Home", "होम"]],
   ["Bharosa Partners", ["Bharosa Partners", "भरोसा सहयोगी"]],
   ["Our Team", ["Our Team", "हमारी टीम"]],
+
   //Home page ----------------------------------
   //headings---
   ["Our Partners", ["Our Partners", "हमारे सहयोगी"]],
   ["Our Team", ["Our Team", "हमारी टीम"]],
-  ["We Are Here", ["We Are Here"]],
+
+
   //sliders---
   ["Trust,", ["Trust,", "विश्वास, "]],
   ["Driving Agri", ["Driving Agri", "मजबूत कृषि का आधार"]],
@@ -30,12 +32,13 @@ const translations = new Map([
       "भरोसा एग्री इनोवेशन प्राइवेट लिमिटेड मध्यप्रदेश में स्थित एक “उद्देश्य संचालित कृषि नवाचार” कंपनी है जो मध्यप्रदेश और कई अन्य राज्यों में किसानों के लिए नवीनतम उत्पाद, सेवाएं, समाधान प्रदान करती है। भरोसा किसानों के साथ कृषि उत्पादकता बढ़ाने और अपने अभिनव दृष्टिकोण के साथ कृषि आय बढ़ाने के लिए काम करता है। भरोसा का सिद्धांत और संचालन कृषि और कृषि पारिस्थितिकी तंत्र में खिलाड़ियों के साथ भरोसेमंद संबंधों में निहित है। भरोसा डेटा संचालित, नवीनतम और सहयोगात्मक दृष्टिकोण का उपयोग करके जुड़ाव और लेनदेन को सक्षम बनाता है जो पारिस्थितिकी तंत्र के सभी खिलाड़ियों को जमीनी स्तर पर आर्थिक रूप से लाभान्वित करता है।",
     ],
   ],
+ 
   //about images andd their tooltips
   ["Bharosa Report", ["Bharosa Report", "भरोसा रिपोर्ट"]],
   [
     "Get a Detailed Farm Analysis Report of your farm",
     ["Get a Detailed Farm Analysis Report of your farm",
-    "अपने खेत की विस्तृत फार्म विश्लेषण रिपोर्ट प्राप्त करें"],
+      "अपने खेत की विस्तृत फार्म विश्लेषण रिपोर्ट प्राप्त करें"],
   ],
 
   ["Bharosa Loan", ["Bharosa Loan", "भरोसा लोन"]],
@@ -124,9 +127,10 @@ const translations = new Map([
   ],
 
   // form --------------------
-  ["Name", ["", "नाम"]],
-  ["Email Address", ["", "ईमेल पता"]],
-  ["Phone Number", ["", "फ़ोन नंबर"]],
+ ["Talk to us",["Talk to us","हमसे बात करें"]]
+  ["Name", ["Name", "नाम"]],
+  ["Email Address", ["Email Address", "ईमेल पता"]],
+  ["Phone Number", ["Phone Number", "फ़ोन नंबर"]],
   ["Where are you located", ["Where are you located", "आप कहां स्थित हैं"]],
   ["What’s on your mind", ["What’s on your mind", "आपके दिमाग में क्या है"]],
   [

@@ -37,14 +37,12 @@ const data = {
             "url": "#ourteam"
         }
     ],
-    heading: 
-        {
-            "id": 1,
-            "head": "Our Partners",
-            "head2": "Our Team",
-        } ,
+    heading: {
+        "id": 1,
+        "head": "Our Partners",
+        "head2": "Our Team",
+    },
     slider: {
-
         "heading": "Trust,",
         "secondhead": "Driving Agri",
         "para": "2X Increase farm Productivity",
@@ -153,8 +151,7 @@ const data = {
             "mail": "mailto:anjul.dubey@baelworks.com"
         }
     ],
-    position:
-    {
+    position: {
         "id": 1,
         "icon": weAreHere,
         "heading": "We Are Here",
@@ -185,7 +182,7 @@ const data = {
             "icon": mail,
             "content": "anjul@bharosa.farm"
         }
-    ]
+    ],
 }
 
 export default data;
