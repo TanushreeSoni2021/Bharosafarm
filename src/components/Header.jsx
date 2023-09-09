@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Styles/Headers.css";
 import "../App.css";
+import data from "../Data/Data"
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,22 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../Assets/logo.png";
 import logolang from "../Assets/language.png";
 import { FiDownload } from "react-icons/fi";
-import Axios from "axios";
 // import T from "../hooks/Translate";
 
 function Header() {
-  const [myheader, setHeader] = useState();
   const [language, setlanguage] = useState(true);
-
-  useEffect(() => {
-    Axios.get(`http://localhost:4000/header`)
-      .then((res) => {
-        console.log(res);
-        setHeader({ val: res });
-        localStorage.setItem('myData', JSON.stringify(res.data))
-      })
-      .catch((error) => console.log(error));
-  }, []);
   return (
     <>
       <Navbar
@@ -43,7 +32,7 @@ function Header() {
           />
           <Navbar.Collapse id="responsive-navbar-nav">
             <div className="mflex">
-              {myheader?.val.data.map((items, index) => {
+              {data.header.map((items, index) => {
                 return (
                   <Nav className="nav-menu" key={index}>
                     <Nav.Link

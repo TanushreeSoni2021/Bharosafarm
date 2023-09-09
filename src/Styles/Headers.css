@@ -85,6 +85,9 @@
   .mflex {
     margin-left: 20vw;
   }
+  /* .navbar-style {
+    background-color: #fff;
+  } */
 }
 @media screen and (max-width: 992px) {
   .mflex {
@@ -97,6 +100,7 @@
 }
 @media screen and (max-width: 600px) {
   .navbar-style {
+    background-color: #fff !important;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -198,11 +202,11 @@
     line-height: 70px;
   }
 }
-@media screen and (max-width: 767px){
-.play {
+@media screen and (max-width: 767px) {
+  .play {
     height: 5dvh;
     width: 1rem;
-}
+  }
 }
 @media screen and (max-width: 769px) {
   .play {

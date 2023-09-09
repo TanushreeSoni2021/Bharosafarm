@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import Axios from "axios";
+import React  from 'react'
 import "../Styles/Footer.css";
+import data from "../Data/Data"
 import footer from "../Assets/Footer.png";
 // import whatsapp from "../Assets/greenwhats.png";
 // import face from "../Assets/greenface.png";
@@ -9,37 +9,14 @@ import footer from "../Assets/Footer.png";
 import Nav from 'react-bootstrap/Nav';
 
 function Footer() {
-    const [myfooter, setFooter] = useState();
-
-    useEffect(() => {
-        Axios.get(`http://localhost:4000/footer`)
-            .then(res => {
-                console.log(res)
-                setFooter({ val: res })
-                localStorage.setItem('myfooter', JSON.stringify(res.data))
-            })
-            .catch(error => console.log(error))
-    }, [])
-
-    const [mycontact, setContact] = useState();
-
-    useEffect(() => {
-        Axios.get(`http://localhost:4000/contact`)
-            .then(res => {
-                console.log(res)
-                setContact({ val: res })
-                localStorage.setItem('myContact', JSON.stringify(res.data))
-
-            })
-            .catch(error => console.log(error))
-    }, [])
+    
     return (
         <>
             <section><img src={footer} width={"100%"} alt='' />
                 <footer className="bg-sucees text-white pt-5 pb-4" style={{ "backgroundColor": "#598216" }} >
                     <div className="container text-center text-md-left">
                         <div className="row text-center text-md-left">
-                            {myfooter?.val.data.map((item, index) => {
+                            {data.footer.map((item, index) => {
                                 return (
                                     <div className="col-md-3 col-lg-4 col-xl-4 mx-auto mt-3 contain-align-footer" key={index}>
                                         <h6 className="text-uppercase mb-1 font-weight-bold text-white contain-align-footer"><img src={item.icon} alt='' />{item.heading}</h6>
@@ -50,7 +27,7 @@ function Footer() {
                             }
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <div className='contain-align-footer contact'>
-                                    {mycontact?.val.data.map((item, index) => {
+                                    {data.contact.map((item, index) => {
                                         return (
                                             <div key={index}>
                                                 <p className='contain-align-footer'> <img className='px-2' src={item.icon} alt='' />  {item.content}</p>

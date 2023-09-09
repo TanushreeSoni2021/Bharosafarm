@@ -1,26 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Axios from "axios";
 import "../Styles/Headers.css";
 import "../App.css";
+import data from "../Data/Data"
 import { Link } from "react-router-dom";
 import { FiDownload } from "react-icons/fi";
 import slider1 from "../Assets/slider1.png";
 import slider2 from "../Assets/slider2.png";
 
 function Slider() {
-  const [mydata, setData] = useState();
 
-  useEffect(() => {
-    Axios.get(`http://localhost:4000/slider/${1}`)
-      .then((response) => {
-        console.log(response);
-        setData({ val: response });
-        localStorage.setItem('mySlider', JSON.stringify(response.data))
-
-      })
-      .catch((error) => console.log(error));
-  }, []);
   return (
     <>
       <div id="home" className="mar">
@@ -30,12 +19,12 @@ function Slider() {
               <img className="d-block w-100" src={slider1} alt="First slide" />
               <Carousel.Caption className="caption">
                 <div className="text-margin m-0">
-                  <h1>{mydata?.val.data.heading} </h1>
-                  <h3>{mydata?.val.data.secondhead}</h3>
+                  <h1>{data.slider.heading} </h1>
+                  <h3>{data.slider.secondhead}</h3>
                   <p>
-                    {mydata?.val.data.para}
+                    {data.slider.para}
                     <br />
-                    {mydata?.val.data.secondpara}
+                    {data.slider.secondpara}
                   </p>
                   <div className="buttons">
                     {/* <a href="https://play.google.com/store/apps/details?id=bharosa.mitra.bharosa_mitra_fe_0_1" target="_blank" >
@@ -78,7 +67,7 @@ function Slider() {
                   >
                     <i className="fa fa-play" aria-hidden="true"></i>
                   </a>
-                  <h3>{mydata?.val.data.video}</h3>
+                  <h3>{data.slider.video}</h3>
                 </div>
               </Carousel.Caption>
             </Carousel.Item>

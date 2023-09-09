@@ -1,6 +1,3 @@
-a {
-  text-decoration: none;
-}
 .button-style {
   border-radius: 5px;
   background-color: #598216;
@@ -13,7 +10,7 @@ a {
 .button-style:hover {
   border-radius: 5px;
   background-color: #fff;
-  border: solid 2px #598216;
+  border: solid 3px #598216;
   color: #598216;
   padding: 0.45rem;
 }
@@ -100,7 +97,7 @@ a {
   width: 80%;
 }
 .change-lan:hover {
-background-color: #729042;
+  background-color: #729042;
 }
 @media screen and (max-width: 992px) {
   .but {
