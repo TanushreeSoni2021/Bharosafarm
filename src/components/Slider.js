@@ -16,6 +16,8 @@ function Slider() {
       .then((response) => {
         console.log(response);
         setData({ val: response });
+        localStorage.setItem('mySlider', JSON.stringify(response.data))
+
       })
       .catch((error) => console.log(error));
   }, []);

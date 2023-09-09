@@ -16,6 +16,7 @@ function Footer() {
             .then(res => {
                 console.log(res)
                 setFooter({ val: res })
+                localStorage.setItem('myfooter', JSON.stringify(res.data))
             })
             .catch(error => console.log(error))
     }, [])
@@ -27,33 +28,35 @@ function Footer() {
             .then(res => {
                 console.log(res)
                 setContact({ val: res })
+                localStorage.setItem('myContact', JSON.stringify(res.data))
+
             })
             .catch(error => console.log(error))
     }, [])
     return (
         <>
-            <section><img src={footer} width={"100%"} />
+            <section><img src={footer} width={"100%"} alt='' />
                 <footer className="bg-sucees text-white pt-5 pb-4" style={{ "backgroundColor": "#598216" }} >
                     <div className="container text-center text-md-left">
                         <div className="row text-center text-md-left">
                             {myfooter?.val.data.map((item, index) => {
-                                    return (
-                                        <div className="col-md-3 col-lg-4 col-xl-4 mx-auto mt-3 contain-align-footer" key={index}>
-                                            <h6 className="text-uppercase mb-1 font-weight-bold text-white contain-align-footer"><img src={item.icon} />{item.heading}</h6>
-                                            <p className='contain-align-footer'>{item.content}</p>
-                                        </div>
-                                    )
-                                })
+                                return (
+                                    <div className="col-md-3 col-lg-4 col-xl-4 mx-auto mt-3 contain-align-footer" key={index}>
+                                        <h6 className="text-uppercase mb-1 font-weight-bold text-white contain-align-footer"><img src={item.icon} alt='' />{item.heading}</h6>
+                                        <p className='contain-align-footer'>{item.content}</p>
+                                    </div>
+                                )
+                            })
                             }
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <div className='contain-align-footer contact'>
                                     {mycontact?.val.data.map((item, index) => {
-                                            return (
-                                                <div key={index}>
-                                                    <p className='contain-align-footer'> <img className='px-2' src={item.icon} />  {item.content}</p>
-                                                </div>
-                                            )
-                                        })
+                                        return (
+                                            <div key={index}>
+                                                <p className='contain-align-footer'> <img className='px-2' src={item.icon} alt='' />  {item.content}</p>
+                                            </div>
+                                        )
+                                    })
                                     }
                                 </div>
                             </div>

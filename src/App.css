@@ -93,7 +93,7 @@ a {
   position: relative;
   border-radius: 5px;
   background-color: #598216;
-  border: 1px solid #fff;
+  border: #598216;
 }
 .change-lan img {
   color: #fff;

@@ -20,6 +20,7 @@ function Header() {
       .then((res) => {
         console.log(res);
         setHeader({ val: res });
+        localStorage.setItem('myData', JSON.stringify(res.data))
       })
       .catch((error) => console.log(error));
   }, []);
@@ -56,6 +57,7 @@ function Header() {
               })}
             </div>
 
+            {/* language change button  */}
             <Nav className="ms-auto">
               <div className="change but">
                 <button className="change-lan">
